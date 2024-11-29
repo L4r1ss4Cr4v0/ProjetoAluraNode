@@ -6,6 +6,7 @@ import {
   listarPosts,
   postarNovoPost,
   uploadImagem,
+  selecionarPost,
 } from "../controllers/postsControllers.js";
 
 const corsOpition = {
@@ -28,6 +29,7 @@ const routes = (app) => {
   app.use(express.json());
   app.use(cors(corsOpition));
   app.get("/posts", listarPosts);
+  app.get("/posts/random", selecionarPost);
   app.post("/posts", postarNovoPost);
   app.post("/upload", upload.single("imagem"), uploadImagem);
   app.put("/upload/:id", atualizarPostagem);

@@ -1,5 +1,6 @@
 import {
   getTodosPosts,
+  getPostAleatorio,
   criarPost,
   atualizarPost,
 } from "../models/postsModel.js";
@@ -8,6 +9,11 @@ import gerarDescricaoComGemini from "../services/geminiServices.js";
 
 export async function listarPosts(req, res) {
   const post = await getTodosPosts();
+  res.status(200).json(post);
+}
+
+export async function selecionarPost(req, res) {
+  const post = await getPostAleatorio();
   res.status(200).json(post);
 }
 

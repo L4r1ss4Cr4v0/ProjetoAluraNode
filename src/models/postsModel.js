@@ -10,6 +10,15 @@ export async function getTodosPosts() {
   return colecao.find().toArray();
 }
 
+export async function getPostAleatorio() {
+  const db = conexao.db("imersao-projeto");
+  const colecao = db.collection("posts");
+  const resultado = await colecao
+    .aggregate([{ $sample: { size: 1 } }])
+    .toArray();
+  return resultado.length > 0 ? resultado[0] : null;
+}
+
 export async function criarPost(novoPost) {
   const db = conexao.db("imersao-projeto");
   const colecao = db.collection("posts");
