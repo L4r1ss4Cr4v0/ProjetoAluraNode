@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InstaBytes</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/byte.ico"
+    />
+    <meta
+      name="description"
+      content="Explore o mundo com Viagem Dev! Veja fotos inspiradoras e histórias de viagens incríveis."
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- <header>
+      <nav class="navbar">
+        <div class="logo">Insta<strong>bytes</strong></div>
+        <div class="nav-links">
+          <button class="login-btn" aria-label="Entrar">Entrar</button>
+          <a href="#" class="signup-link" aria-label="Cadastre-se"
+            >Cadastre-se</a
+          >
+        </div>
+      </nav>
+    </header> -->
+
+    <section>
+      <div class="container">
+        <h2>Sobre o projeto</h2>
+        <p>
+          A ideia dessa API se derivou da imersão com a Alura + Google sobre
+          Node.js. Durante as aulas fomos aprendedosndo sobre o framework,
+          Javascript e MongoDB.
+          <br /><br />
+          Fizemos um projeto para auxiliar na compreeção do conteúdo: uma API
+          que fornece dados e imagens.
+          <br /><br />
+          O projeto está armazenado no Google Clound, além de conter uma
+          integração com a IA do Google (Gemini) que é a responsável por gerar a
+          string de descrição da imagem. Todas as imagens são feitas pela
+          Gemini.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Modo de usar</h2>
+        <p>Retorna um post aleatório em formato JSON</p>
+        <code> http://localhost:3000/posts/random </code>
+        <p>Exemplo de resposta</p>
+        <code>
+          {
+          <br />
+          "_id" : "674640a325dc93dc668b1ed6",
+          <br />
+          "descricao" : "Rua portuguesa com vista deslumbrante da Torre
+          Eiffel.",
+          <br />
+          "imgUrl" : "http://localhost:3000/674640a325dc93dc668b1ed6.png",
+          <br />
+          "alt" : "Imagem da Torre Eiffel em Portugal"
+          <br />
+          }
+        </code>
+        <p>Retorna todos os posts</p>
+        <code> http://localhost:3000/posts </code>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="profile-header">
+        <div class="profile-info">
+          <h2>Galeria</h2>
+          <p>
+            A API ofereçe mais de 30 imagens da Torre EIffel em diferentes
+            lugares do mundo, cada uma contendo sua descrição customizada pelo
+            Gemini
+          </p>
+        </div>
+      </section>
+
+      <section class="image-grid"></section>
+    </main>
+    <div id="modal" class="modal">
+      <span class="close">x</span>
+      <img class="modal-content" id="modal-img" />
+      <div id="caption"></div>
+    </div>
+
+    <script src="assets/js/index.js" type="module"></script>
+  </body>
+</html>
