@@ -87,6 +87,6 @@ Descrição: Devolve um post aleatório.
 Descrição: Devolve a imagem do correspondente ao post com tal id.
     
    - **Exemplo de Resposta**:
-   ![Torre Eiffel nos Estados Unidos](URL_da_Imagem)
+   ![Torre Eiffel nos Estados Unidos](./uploads/6746433525dc93dc668b1ed8.png)
 
    
